@@ -36,6 +36,7 @@ xhr.onreadystatechange = function () {
       console.log(xhr.responseText);
    }};
    var user = JSON.stringify({"first_name":firstname, "last_name":lastname, "gender":gender, "email":email});
+   $.post("http://localhost:3000/employees",{"first_name":firstname, "last_name":lastname, "gender":gender, "email":email});
    xhr.send(user);
 }
           
