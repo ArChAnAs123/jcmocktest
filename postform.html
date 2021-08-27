@@ -34,9 +34,10 @@ xhr.onreadystatechange = function () {
    if (xhr.readyState === 4 && xhr.status === 200) {
       console.log(xhr.status);
       console.log(xhr.responseText);
+      $.post("http://localhost:3000/employees",{"first_name":firstname, "last_name":lastname, "gender":gender, "email":email},function());
    }};
    var user = JSON.stringify({"first_name":firstname, "last_name":lastname, "gender":gender, "email":email});
-   $.post("http://localhost:3000/employees",{"first_name":firstname, "last_name":lastname, "gender":gender, "email":email});
+  
    xhr.send(user);
 }
           
