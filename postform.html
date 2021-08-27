@@ -7,22 +7,22 @@
       <p>Add your details:</p>
       <form id="first" action="#" method="post" >
         
-        Firstname:<br> <input type="text" name="fname" id="fname">
+        Firstname:<br> <input type="text" name="fname" id="fname" class="classf">
          <br>
-         Lastname:<br> <input type="text" name="lname" id="lname">
+         Lastname:<br> <input type="text" name="lname" id="lname" class="classl">
          <br>
-         Gender:<br> <input type="text" name="gender" id="gender">
+         Gender:<br> <input type="text" name="gender" id="gender" class="classg">
          <br>
-         Emailid:<br> <input type="text" name="email" id="email">
+         Emailid:<br> <input type="text" name="email" id="email" class="classe">
          <input type="submit"  value="Submit" onclick="loadDoc();">
          
       </form>
       <script>
         function loadDoc(){
-    var firstname=form.elements['fname'].value;
-    var lastname=form.elements['lname'].value;
-    var gender=form.elements['gender'].value;
-    var email=form.elements['email'].value;
+    var firstname=document.getElementsByClassName("classf")[0].value;
+    var lastname=document.getElementsByClassName("classl")[0].value;
+    var gender=document.getElementsByClassName("classg")[0].value;
+    var email=document.getElementsByClassName("classe")[0].value;
     console.log("d");
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "http://localhost:3000/users",true);
